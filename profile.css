@@ -221,3 +221,39 @@ h2 {
   color: #00fff7;
   font-weight: 600;
 }
+/* SPLIT LAYOUT */
+.profile-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+}
+
+/* LEFT SIDE */
+.left-panel {
+  flex: 1;
+}
+
+/* RIGHT SIDE */
+.right-panel {
+  flex: 1.2;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* SCROLLBAR STYLING */
+.right-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-panel::-webkit-scrollbar-thumb {
+  background: #ff61a6;
+  border-radius: 10px;
+}
+
+/* MAKE RESPONSIVE */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+  }
+}
